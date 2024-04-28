@@ -14,12 +14,12 @@ class RequestQueue:
 
     def generate_request(self, request_data=None):
         print("Generating request...")
-        request = Request(request_data)
+        request: Request = Request(request_data)
         print("Request generated: %s" % request.request_id)
         self.queue.put(request)
 
     def process_request(self):
-        request = self.queue.get()
+        request: Request = self.queue.get()
         if request:
             print("Processing request: %s" % request.request_id)
         else:
@@ -27,7 +27,7 @@ class RequestQueue:
 
 
 if __name__ == "__main__":
-    request_queue = RequestQueue()
+    request_queue: RequestQueue = RequestQueue()
     while True:
         try:
             request_queue.generate_request()

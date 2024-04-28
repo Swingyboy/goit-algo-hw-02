@@ -1,6 +1,6 @@
 def check_brackets(string: str) -> str:
     stack = []
-    brackets = {'(': ')', '[': ']', '{': '}'}
+    brackets = {"(": ")", "[": "]", "{": "}"}
     opening_brackets = set(brackets.keys())
     closing_brackets = set(brackets.values())
 
